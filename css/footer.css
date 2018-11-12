@@ -1,0 +1,42 @@
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer {
+  width: 100%;
+}
+
+ footer ul li {
+   width: 100%
+   padding: 15px;
+ }
+
+.nav {
+  margin-left: 42%;
+}
+
+.nav a {
+  color: #555;
+}
+
+.nav>li>a {
+  font-size: 120%;
+}
+
+.linha {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.main-footer {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+}
