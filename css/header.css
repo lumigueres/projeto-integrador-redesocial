@@ -1,61 +1,31 @@
 
-.name {
+body {
   font-family: 'Roboto Slab', serif;
+}
+
+/* Overriding Bootstrap */
+.btn, .form-control {
+    border-radius: 20px !important;
+}
+
+
+
+.main-header {
   text-transform: lowercase;
-}
-
-.input-group {
-  width: 30%;
-  border-radius: 20px;
-  margin: 0 auto;
-}
-
-.search-shape {
-  width: 5%;
-  margin-left: 20px;
-}
-
-.search-icon {
-  width: 100%;
-}
-
-.search-field {
-  border-radius: 20px;
-}
-
-.linha {
   border-bottom: 1px solid #ccc;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
+  padding: 20px;
+  margin-bottom: 15px;
 }
 
-.input-group-btn.search-button {
-    border-radius: 20px;
+.main-header__logo {
+  margin: 0;
 }
 
-.input-group-btn:last-child>.btn {
-  border-radius: 20px;
+.main-header__input {
+  display: inline-block;
+  width: 70%;
 }
 
-.input-group .form-control:first-child {
-  border-radius: 20px;
-}
-
-.header-button {
-    border-radius: 50px;
-    border: none;
-    color: #6f19ff;
-}
-
-.main-header-align {
-  display: flex;
-  align-items: flex-end;
-}
-
-input.form-control {
-    border-radius: 50px;
-}
-
-.barra-inicial {
-  width: 50%;
+.main-header__icon {
+  width: 30px;
 }
