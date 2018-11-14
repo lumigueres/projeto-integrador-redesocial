@@ -8,22 +8,26 @@
   <title>sociable</title>
   </head>
 
-  <body>
-    <div class="container-fluid">
+<body>
 
-    <header class="row main-header main-header-align linha">
-        <span class="name"><h1>sociable</h1>
-        </span>
+<header class="main-header container-fluid">
 
-        <div class="input-group">
-          <input type="text" class="form-control search-field" placeholder="Quem você está procurando?">
-          <span class="input-group-btn search-button search-shape">
-            <img class="search-icon" src="../images/search_icon.png" href="#">
-          </span>
+<div class="row">
+  <div class="col-xs-10 col-md-8">
+    <h1 class="main-header__logo">sociable</h1>
+  </div>
 
-        </div>
-      </div>
-    </header>
+  <div class="col-md-4">
+    <?php
+      if($isLogged) {
+    ?>
+    <input type="text" class="main-header__input form-control hidden-xs hidden-sm" placeholder="Quem você está procurando?">
+    <img class="main-header__icon" src="../images/search_icon.png" href="#">
+    <?php
+      }
+    ?>
+  </div>
+
 </div>
-  </body>
-</html>
+
+</header>
