@@ -5,7 +5,7 @@ body {
 
 /* Overriding Bootstrap */
 .btn, .form-control {
-    border-radius: 20px !important;
+    border-radius: 20px;
 }
 
 
@@ -14,7 +14,7 @@ body {
   text-transform: lowercase;
   border-bottom: 1px solid #ccc;
   padding: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .main-header__logo {
