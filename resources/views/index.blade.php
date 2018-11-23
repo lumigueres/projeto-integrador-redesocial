@@ -1,15 +1,15 @@
+@extends('layouts.app')
 
+@section('css-custom', '/css/login.css')
 
-  <?php include 'header.php' ?>
-
-<link rel="stylesheet" href="../css/login.css">
+@section('content')
 
   <div class="container-fluid">
     <div class="row flex-md">
 
       <div class="welcome col-md-8">
 
-        <img class="welcome__image" src="../images/login_image.jpg">
+        <img class="welcome__image" src="/images/login_image.jpg">
 
         <div class="welcome__wrapper">
           <p class="welcome__slogan">uma rede social sob medida para a sua equipe</p>
@@ -51,4 +51,4 @@
 
 </div>
 
-<?php include 'footer.php' ?>
+@stop
