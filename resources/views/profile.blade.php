@@ -49,10 +49,12 @@
       <button type="button" class="btn btn-default profile-tag-area__button--remove">remover</button>
     </div>
 
-    <div class="profile__button">
-
-    </div>
   </div>
+
+    <div class="profile__buttons row col-lg-2 col-md-2 col-xs-4 col-lg-offset-5 col-md-offset-4 col-md-offset-2">
+      <button type="button" class="btn btn-default profile__buttons--edit">editar</button>
+      <button type="button" class="btn btn-default profile__buttons--save">salvar</button>
+    </div>
 
 </div>
 @stop
