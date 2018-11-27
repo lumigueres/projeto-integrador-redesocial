@@ -17,7 +17,7 @@
 
   <div class="row">
     <div class="col-xs-10 col-md-8">
-      <h1 class="main-header__logo"><a href="index.php">sociable</a></h1>
+      <h1 class="main-header__logo"><a href="/home">sociable</a></h1>
     </div>
 
     <div class="col-md-4">
@@ -39,8 +39,8 @@
        <div class="row">
            <footer class="label label-primary col-md-12 col-xs-12 col-lg-12 main-footer">
              <ul class="nav nav-pills">
-               <li role="presentation"><a href="quemsomos.php">QUEM SOMOS</a></li>
-               <li role="presentation"><a href="faq.php">FAQ</a></li>
+               <li role="presentation"><a href="/equipe">QUEM SOMOS</a></li>
+               <li role="presentation"><a href="/faq">FAQ</a></li>
              </ul>
            </footer>
          </div>

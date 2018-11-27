@@ -13,7 +13,9 @@
 
         <div class="welcome__wrapper">
           <p class="welcome__slogan">uma rede social sob medida para a sua equipe</p>
-          <button class="btn btn-default welcome__button" type="button" name="button">descubra como funciona</button>
+
+          <!-- essa linha abaixo faz o link entre as paginas -->
+          <a class="btn btn-default welcome__button" href="/descubra" name="button">descubra como funciona</a>
         </div>
 
       </div>
