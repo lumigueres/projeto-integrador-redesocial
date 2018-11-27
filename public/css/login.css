@@ -23,6 +23,10 @@
   margin: 10px auto;
 }
 
+.welcome__button {
+  color: #333;
+}
+
 
 .login {
  border: solid 1px #ccc;

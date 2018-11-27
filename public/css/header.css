@@ -21,6 +21,10 @@ body {
   margin: 0;
 }
 
+.main-header__logo a {
+  color: #333;
+}
+
 .main-header__input {
   display: inline-block;
   width: 70%;
