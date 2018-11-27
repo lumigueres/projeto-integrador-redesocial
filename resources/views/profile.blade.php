@@ -13,7 +13,7 @@
 
     <div class="profile-picture col-lg-3 col-md-3 col-sm-8 col-sm-offset-2 col-md-offset-0 col-xs-8 col-xs-offset-2">
 
-      <img src="/images/profile_pic.png" alt="foto" class="profile-picture__image">
+      <img src="../images/profile_pic.png" alt="foto" class="profile-picture__image">
       <button class="btn btn-default profile-picture__button" type="button" name="button">insira a sua foto
       </button>
 
@@ -57,4 +57,5 @@
     </div>
 
 </div>
+
 @stop

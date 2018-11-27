@@ -1,7 +1,9 @@
+@extends('layouts.app')
 
-  <?php include 'header.php' ?>
+@section('css-custom', '/css/faq.css')
 
-<link rel="stylesheet" href="../css/faq.css">
+@section('content')
+
 
 <div class="container-fluid">
   <div class="row flex-md">
@@ -53,4 +55,5 @@
   </div>
 </div>
 
-<?php include 'footer.php' ?>
+
+@stop

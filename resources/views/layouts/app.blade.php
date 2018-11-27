@@ -13,33 +13,41 @@
 </head>
 <body>
 
-<header class="main-header container-fluid">
+  <header class="main-header container-fluid">
 
-    <div class="row">
+  <div class="row">
     <div class="col-xs-10 col-md-8">
-        <h1 class="main-header__logo">sociable</h1>
+      <h1 class="main-header__logo"><a href="index.php">sociable</a></h1>
     </div>
 
     <div class="col-md-4">
-        <input type="text" class="main-header__input form-control hidden-xs hidden-sm" placeholder="Quem você está procurando?">
-        <img class="main-header__icon" src="/images/search_icon.png" href="#">
+      <?php
+        if($isLogged) {
+      ?>
+      <input type="text" class="main-header__input form-control hidden-xs hidden-sm" placeholder="Quem você está procurando?">
+      <img class="main-header__icon" src="../images/search_icon.png" href="#">
+
+      <?php
+        }
+      ?>
     </div>
 
-    </div>
-</header>
+  </div>
+
+  </header>
 
        @yield('content')
 
-<div class="container-fluid">
- <div class="row">
-    <footer class="label label-primary col-md-12 col-xs-12 col-lg-12 main-footer">
-      <ul class="nav nav-pills">
-        <li role="presentation"><a href="#">QUEM SOMOS</a></li>
-        <li role="presentation"><a href="#">FAQ</a></li>
-      </ul>
-    </footer>
-  </div>
-</div>
+       <link rel="stylesheet" href="/css/footer.css">
+
+       <div class="row">
+           <footer class="label label-primary col-md-12 col-xs-12 col-lg-12 main-footer">
+             <ul class="nav nav-pills">
+               <li role="presentation"><a href="quemsomos.php">QUEM SOMOS</a></li>
+               <li role="presentation"><a href="faq.php">FAQ</a></li>
+             </ul>
+           </footer>
+         </div>
 
   </body>
 </html>

@@ -9,7 +9,11 @@
 
       <div class="welcome col-md-8">
 
+<<<<<<< Updated upstream:resources/views/index.blade.php
         <img class="welcome__image" src="/images/login_image.jpg">
+=======
+        <img class="welcome__image" src="../images/login_image.jpg" href= >
+>>>>>>> Stashed changes:componentes/index.php
 
         <div class="welcome__wrapper">
           <p class="welcome__slogan">uma rede social sob medida para a sua equipe</p>
