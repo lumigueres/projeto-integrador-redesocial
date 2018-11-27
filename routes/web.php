@@ -20,3 +20,12 @@ Route::get('/', function () {
 Route::get('/home', 'IndexController@index');
 
 Route::get('/profile', 'ProfileController@exibir');
+
+Route::get('/equipe', 'FaqController@quemSomos');
+
+Route::get('/faq', 'FaqController@exibir');
+
+Route::get('/descubra', 'FaqController@start');
+
+
+

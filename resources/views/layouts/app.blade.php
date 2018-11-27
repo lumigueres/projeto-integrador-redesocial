@@ -21,15 +21,11 @@
     </div>
 
     <div class="col-md-4">
-      <?php
-        if($isLogged) {
-      ?>
+
+    
       <input type="text" class="main-header__input form-control hidden-xs hidden-sm" placeholder="Quem você está procurando?">
       <img class="main-header__icon" src="../images/search_icon.png" href="#">
 
-      <?php
-        }
-      ?>
     </div>
 
   </div>
