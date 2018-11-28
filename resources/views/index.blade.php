@@ -26,10 +26,10 @@
           <p>login</p>
         </div>
 
-        <form class="form-horizontal side">
+        <form class="form-horizontal side login-form">
 
           <label for="email" class="control-label">e-mail</label>
-          <input type="email" class="form-control" id="email" placeholder="seu e-mail">
+          <input type="email" class="form-control" id="email" required placeholder="seu e-mail">
 
 
           <label for="password" class="control-label">senha</label>
@@ -52,5 +52,7 @@
   </div>
 
 </div>
+
+<script type="text/javascript" src="/js/login.js"></script>
 
 @stop
