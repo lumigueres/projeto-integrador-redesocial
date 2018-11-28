@@ -1,10 +1,16 @@
 
 
 img.startnow__image {
-    width: 60%;
+  width: 60%;
+  margin: 0 auto;
 }
 
 
 .startnow__title {
   font-size: 20px;
+}
+
+.startnow__row {
+  margin-bottom: 20px;
+  text-align: center;
 }
