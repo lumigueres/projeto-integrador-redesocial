@@ -1,0 +1,72 @@
+-- MySQL Workbench Synchronization
+-- Generated: 2018-11-27 21:08
+-- Model: New Model
+-- Version: 1.0
+-- Project: Name of the project
+-- Author: HP
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+CREATE TABLE IF NOT EXISTS `mydb`.`users_has_group_users` (
+  `users_user_id` INT(11) NOT NULL,
+  `group_users_group_users_id` INT(11) NOT NULL,
+  PRIMARY KEY (`users_user_id`, `group_users_group_users_id`),
+  INDEX `fk_users_has_group_users_group_users1_idx` (`group_users_group_users_id` ASC) ,
+  INDEX `fk_users_has_group_users_users_idx` (`users_user_id` ASC) ,
+  CONSTRAINT `fk_users_has_group_users_users`
+    FOREIGN KEY (`users_user_id`)
+    REFERENCES `mydb`.`users` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_users_has_group_users_group_users1`
+    FOREIGN KEY (`group_users_group_users_id`)
+    REFERENCES `mydb`.`group_users` (`group_users_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`users_has_tags` (
+  `users_user_id` INT(11) NOT NULL,
+  `tags_tag_id` INT(11) NOT NULL,
+  PRIMARY KEY (`users_user_id`, `tags_tag_id`),
+  INDEX `fk_users_has_tags_tags1_idx` (`tags_tag_id` ASC) ,
+  INDEX `fk_users_has_tags_users1_idx` (`users_user_id` ASC) ,
+  CONSTRAINT `fk_users_has_tags_users1`
+    FOREIGN KEY (`users_user_id`)
+    REFERENCES `mydb`.`users` (`user_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_users_has_tags_tags1`
+    FOREIGN KEY (`tags_tag_id`)
+    REFERENCES `mydb`.`tags` (`tag_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`group_users_has_tags` (
+  `group_users_group_users_id` INT(11) NOT NULL,
+  `tags_tag_id` INT(11) NOT NULL,
+  PRIMARY KEY (`group_users_group_users_id`, `tags_tag_id`),
+  INDEX `fk_group_users_has_tags_tags1_idx` (`tags_tag_id` ASC) ,
+  INDEX `fk_group_users_has_tags_group_users1_idx` (`group_users_group_users_id` ASC) ,
+  CONSTRAINT `fk_group_users_has_tags_group_users1`
+    FOREIGN KEY (`group_users_group_users_id`)
+    REFERENCES `mydb`.`group_users` (`group_users_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_group_users_has_tags_tags1`
+    FOREIGN KEY (`tags_tag_id`)
+    REFERENCES `mydb`.`tags` (`tag_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

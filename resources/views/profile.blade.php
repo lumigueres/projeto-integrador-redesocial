@@ -20,7 +20,7 @@
     </div>
 
     <div class="profile-input col-lg-9 col-md-9 col-sm-12 col-xs-12">
-
+    
       <input type="name" class="form-control profile-input__field" placeholder="nome">
       <input type="last-name" class="form-control profile-input__field" placeholder="sobrenome">
       <input type="area" class="form-control profile-input__field" placeholder="área de atuação">

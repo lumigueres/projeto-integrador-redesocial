@@ -29,3 +29,7 @@ Route::get('/descubra', 'FaqController@start');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
