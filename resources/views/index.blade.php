@@ -42,7 +42,7 @@
           </div>
 
           <button type="submit" class="btn btn-default login__button">entrar</button>
-          <button type="button" class="btn btn-default login__button--register">cadastrar</button>
+          <button type="button" class="btn btn-default login__button--register"><a href="/profile">cadastrar</button>
 
         </form>
       </div>
