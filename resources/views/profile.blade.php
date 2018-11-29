@@ -14,22 +14,21 @@
     <div class="profile-picture col-lg-3 col-md-3 col-sm-8 col-sm-offset-2 col-md-offset-0 col-xs-8 col-xs-offset-2">
 
       <img src="../images/profile_pic.png" alt="foto" class="profile-picture__image">
-      <button class="btn btn-default profile-picture__button" type="button" name="button">insira a sua foto
-      </button>
+      <button class="btn btn-default profile-picture__button" type="button" name="button">insira a sua foto</button>
 
     </div>
 
     <div class="profile-input col-lg-9 col-md-9 col-sm-12 col-xs-12">
-    
-      <input type="name" class="form-control profile-input__field" placeholder="nome">
-      <input type="last-name" class="form-control profile-input__field" placeholder="sobrenome">
-      <input type="area" class="form-control profile-input__field" placeholder="área de atuação">
-      <input type="email" class="form-control profile-input__field" placeholder="e-mail">
-      <input type="position" class="form-control profile-input__field" placeholder="cargo/papel">
-      <input type="telephone" class="form-control profile-input__field" placeholder="telefone">
-      <input type="number" class="form-control profile-input__field" placeholder="ramal">
-      <input type="create-password" class="form-control profile-input__field" placeholder="crie a sua senha">
-      <input type="confirm-password" class="form-control profile-input__field" placeholder="confirme a sua senha">
+
+      <input type="name" class="form-control profile-input__field" id="name" placeholder="nome">
+      <input type="last-name" class="form-control profile-input__field" id="last-name" placeholder="sobrenome">
+      <input type="area" class="form-control profile-input__field" id="area" placeholder="área de atuação">
+      <input type="email" pattern=".+@globex.com" class="form-control profile-input__field" id="email-corp" placeholder="e-mail">
+      <input type="position" class="form-control profile-input__field" id="position" placeholder="cargo/papel">
+      <input type="telephone" class="form-control profile-input__field" id="telephone" placeholder="telefone">
+      <input type="number" class="form-control profile-input__field" id="number" placeholder="ramal">
+      <input type="create-password" class="form-control profile-input__field" id="create-password" placeholder="crie a sua senha">
+      <input type="confirm-password" class="form-control profile-input__field" id="confirm-password" placeholder="confirme a sua senha">
 
     </div>
 

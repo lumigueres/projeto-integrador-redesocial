@@ -26,17 +26,13 @@
           <p>login</p>
         </div>
 
-        <form class="form-horizontal side">
+        <form class="form-horizontal side login-form">
 
           <label for="email" class="control-label">e-mail</label>
           <input type="email" class="form-control" id="email" placeholder="seu e-mail">
-     <!--  <label for="email" class="control-label">e-mail</label>
-          <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" id="email" value="{{ old('email') }}" required autofocus placeholder="seu e-mail">
-          @if ($errors->has('email'))
-            <span class="invalid-feedback" role="alert">
-              <strong>{{ $errors->first('email') }}</strong>
-            </span>
-          @endif -->
+     
+          <input type="email" class="form-control" id="email" required placeholder="seu e-mail">
+
 
           <label for="password" class="control-label">senha</label>
           <input type="password" class="form-control" id="password" placeholder="sua senha">
@@ -58,5 +54,7 @@
   </div>
 
 </div>
+
+<script type="text/javascript" src="/js/login.js"></script>
 
 @stop
