@@ -29,7 +29,6 @@
         <form class="form-horizontal side login-form">
 
           <label for="email" class="control-label">e-mail</label>
-          <input type="email" class="form-control" id="email" placeholder="seu e-mail">
      
           <input type="email" class="form-control" id="email" required placeholder="seu e-mail">
 
@@ -44,7 +43,7 @@
           </div>
 
           <button type="submit" class="btn btn-default login__button">entrar</button>
-          <button type="button" class="btn btn-default login__button--register"><a href="/profile">cadastrar</button>
+          <button type="button" class="btn btn-default login__button--register"><a href="/profile">cadastrar</a></button>
 
         </form>
       </div>
