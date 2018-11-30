@@ -22,10 +22,10 @@
 
     <div class="col-md-4">
 
-    
-      <input type="text" class="main-header__input form-control hidden-xs hidden-sm" placeholder="Quem você está procurando?">
-      <img class="main-header__icon" src="../images/search_icon.png" href="#">
-
+      @empty($isNotLogged)
+        <input type="text" class="main-header__input form-control hidden-xs hidden-sm" placeholder="Quem você está procurando?">
+        <img class="main-header__icon" src="../images/search_icon.png" href="#">
+      @endempty
     </div>
 
   </div>
