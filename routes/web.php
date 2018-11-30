@@ -13,13 +13,15 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/', 'Auth\LoginController@showLoginForm');
 
 Route::get('/home', 'IndexController@index');
 
-Route::get('/profile', 'ProfileController@exibir');
+Route::get('/profile/{user_email}', 'ProfileController@exibir');
 
 Route::get('/equipe', 'FaqController@quemSomos');
 
