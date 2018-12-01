@@ -13,15 +13,18 @@ class Usuario extends Migration
      */
     public function up()
     {
-        Schema::create('usuario', function($table){
-            $table->increments('usuario_id');
-            $table->string('nome');
-            $table->string('sobrenome');
-            $table->string('e-mail');
-            $table->string('celular');
-            $table->string('senha');
-            $table->string('senhaConfirme');
-            $table->dateTimeTz('criado');	
+        Schema::create('user_info', function($table){
+            $table->increments('user_info_id');
+            $table->string('name');
+            $table->string('last_name')->default('');
+            $table->string('area')->default('');
+            $table->string('email')->unique();
+            $table->string('position')->default('');
+            $table->string('phone')->default('');
+            $table->string('number')->default('');
+            $table->string('mini_bio')->default('');
+            $table->string('image')->default('/');
+            $table->string('status')->default('active');
             $table->timestamps();
         });
     }
@@ -33,6 +36,6 @@ class Usuario extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuario');
+        Schema::dropIfExists('user_info');
     }
 }
