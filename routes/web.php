@@ -21,7 +21,8 @@ Route::get('/', 'Auth\LoginController@showLoginForm');
 
 Route::get('/home', 'IndexController@index');
 
-Route::get('/profile/{user_email}', 'ProfileController@exibir');
+Route::get('/profile/{identifier}', 'ProfileController@exibirProfile');
+Route::post('/profile/{identifier}', 'ProfileController@updateProfile');
 
 Route::get('/equipe', 'FaqController@quemSomos');
 
