@@ -7,11 +7,10 @@
 <link rel="stylesheet" href="/css/profile.css">
 
 <div class="profile container-fluid">
-
-  <h1>{{ $user }}</h1>
-
+  <h1>{{ $isOwner }}</h1>
   <div class="profile__row row">
-
+    <form method="POST" action="">
+      @csrf
     <div class="profile-picture col-lg-3 col-md-3 col-sm-8 col-sm-offset-2 col-md-offset-0 col-xs-8 col-xs-offset-2">
 
       <img src="../images/profile_pic.png" alt="foto" class="profile-picture__image">
@@ -20,15 +19,13 @@
     </div>
 
     <div class="profile-input col-lg-9 col-md-9 col-sm-12 col-xs-12">
-        <input type="text" class="form-control profile-input__field" id="name" placeholder="nome">
-        <input type="text" class="form-control profile-input__field" id="last-name" placeholder="sobrenome">
-        <input type="text" class="form-control profile-input__field" id="area" placeholder="área de atuação">
-        <input type="email" pattern=".+@globex.com" class="form-control profile-input__field" id="email-corp" placeholder="e-mail">
-        <input type="text" class="form-control profile-input__field" id="position" placeholder="cargo/papel">
-        <input type="number" class="form-control profile-input__field" id="telephone" placeholder="telefone">
-        <input type="number" class="form-control profile-input__field" id="number" placeholder="ramal">
-        <input type="text" class="form-control profile-input__field" id="create-password" placeholder="crie a sua senha">
-        <input type="text" class="form-control profile-input__field" id="confirm-password" placeholder="confirme a sua senha">
+        <input type="text" class="form-control profile-input__field" name="name" id="name" placeholder="nome" @unless($isOwner) readonly @endunless value="{{ $user->name }}">
+        <input type="text" class="form-control profile-input__field" name="last_name" id="last-name" placeholder="sobrenome" @unless($isOwner) readonly @endunless value="{{ $user->last_name }}">
+        <input type="text" class="form-control profile-input__field" name="area" id="area" placeholder="área de atuação" @unless($isOwner) readonly @endunless value="{{ $user->area }}">
+        <input type="email" pattern=".+@globex.com" class="form-control profile-input__field" name="email" id="email-corp" placeholder="e-mail" @unless($isOwner) readonly @endunless value="{{ $user->email }}">
+        <input type="text" class="form-control profile-input__field" name="position" id="position" placeholder="cargo/papel" @unless($isOwner) readonly @endunless value="{{ $user->position }}">
+        <input type="number" class="form-control profile-input__field" name="phone" id="telephone" placeholder="telefone" @unless($isOwner) readonly @endunless value="{{ $user->phone }}">
+        <input type="number" class="form-control profile-input__field" name="number" id="number" placeholder="ramal" @unless($isOwner) readonly @endunless value="{{ $user->number }}">
     </div>
 
   </div>
@@ -51,9 +48,9 @@
 
     <div class="profile__buttons row col-lg-2 col-md-2 col-xs-4 col-lg-offset-5 col-md-offset-4 col-md-offset-2">
       <button type="button" class="btn btn-default profile__buttons--edit">editar</button>
-      <button type="button" class="btn btn-default profile__buttons--save">salvar</button>
+      <button type="submit" class="btn btn-default profile__buttons--save">salvar</button>
     </div>
-
+  </form>
 </div>
 
 @stop
