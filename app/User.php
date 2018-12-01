@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
@@ -30,4 +31,14 @@ class User extends Authenticatable
     protected $primaryKey = 'user_id';
 
     public $timestamps = false;
+
+    public static function boot() {
+        static::created(function(User $user) {
+          DB::table('user_info')
+            ->insert(['name' => $user->name, 'email' => $user->email]);
+        });
+
+        parent::boot();
+    }
+
 }
