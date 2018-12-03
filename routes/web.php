@@ -30,7 +30,7 @@ Route::get('/faq', 'FaqController@exibir');
 
 Route::get('/descubra', 'FaqController@start');
 
-
+Route::get('/logout','Auth\LoginController@logout');
 
 
 Auth::routes();
