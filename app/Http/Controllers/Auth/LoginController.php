@@ -45,4 +45,10 @@ class LoginController extends Controller
       return redirect('/profile/'.urlencode($request->user()->email));
     }
 
+    public function logout()
+    {
+      Auth::logout();
+      return redirect('/');
+    }
+
 }
