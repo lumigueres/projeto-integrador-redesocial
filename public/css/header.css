@@ -33,3 +33,8 @@ body {
 .main-header__icon {
   width: 30px;
 }
+
+.main-header__logout {
+  color: #333;
+  margin-left: 10px;
+}
