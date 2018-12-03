@@ -21,9 +21,9 @@ class Usuario extends Migration
             $table->string('email')->unique();
             $table->string('position')->default('');
             $table->string('phone')->default('');
-            $table->string('number')->default('');
-            $table->string('mini_bio')->default('');
-            $table->string('image')->default('/');
+            $table->string('number')->default('')->nullable();
+            $table->string('mini_bio')->default('')->nullable();
+            $table->string('image')->nullable();
             $table->string('status')->default('active');
             $table->timestamps();
         });
