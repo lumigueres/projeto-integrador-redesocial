@@ -16,15 +16,16 @@
   <header class="main-header container-fluid">
 
   <div class="row">
-    <div class="col-xs-10 col-md-8">
+    <div class="col-xs-8">
       <h1 class="main-header__logo"><a href="/home">sociable</a></h1>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-xs-4">
 
       @empty($isNotLogged)
         <input type="text" class="main-header__input form-control hidden-xs hidden-sm" placeholder="Quem você está procurando?">
         <img class="main-header__icon" src="../images/search_icon.png" href="#">
+        <a href="/logout" class="main-header__logout">sair</a>
       @endempty
     </div>
 
