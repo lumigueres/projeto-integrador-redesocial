@@ -1,0 +1,8 @@
+h2.card-header.register_titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.register__button-submit {
+  background-color: #333;
+}
