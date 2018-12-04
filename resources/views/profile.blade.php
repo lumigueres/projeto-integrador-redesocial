@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="/css/profile.css">
 
 <div class="profile container-fluid">
-  <h1>{{ $isOwner }}</h1>
+  
   <div class="profile__row row">
     <form method="POST" action="" enctype="multipart/form-data">
       @csrf
