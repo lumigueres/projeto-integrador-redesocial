@@ -38,3 +38,13 @@ body {
   color: #333;
   margin-left: 10px;
 }
+
+.search__button {
+  border: none;
+  padding: 0;
+}
+
+.not-clickable {
+  pointer-events: none !important;
+  cursor: default !important;
+}
