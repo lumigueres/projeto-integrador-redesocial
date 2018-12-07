@@ -34,6 +34,8 @@ Route::get('/descubra', 'FaqController@start');
 
 Route::get('/logout','Auth\LoginController@logout');
 
+Route::get('/search', 'SearchController@pesquisar');
+
 
 Auth::routes();
 
