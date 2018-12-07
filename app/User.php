@@ -34,8 +34,8 @@ class User extends Authenticatable
 
     public static function boot() {
         static::created(function(User $user) {
-          DB::table('user_info')
-            ->insert(['name' => $user->name, 'email' => $user->email]);
+          DB::table('users')
+            ->insert(['name' => $user->name, 'email' => $user->email, 'password' => $user->password]);
         });
 
         parent::boot();

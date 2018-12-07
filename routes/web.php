@@ -21,8 +21,10 @@ Route::get('/', 'Auth\LoginController@showLoginForm');
 
 Route::get('/home', 'IndexController@index');
 
+Route::get('/profile/delete','ProfileController@delete');
 Route::get('/profile/{identifier}', 'ProfileController@exibirProfile');
 Route::post('/profile/{identifier}', 'ProfileController@updateProfile');
+
 
 Route::get('/equipe', 'FaqController@quemSomos');
 
@@ -36,3 +38,4 @@ Route::get('/logout','Auth\LoginController@logout');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

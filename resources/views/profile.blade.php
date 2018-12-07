@@ -57,6 +57,7 @@
     <div class="profile__buttons row col-lg-2 col-md-2 col-xs-4 col-lg-offset-5 col-md-offset-4 col-md-offset-2">
       <button type="button" class="btn btn-default profile__buttons--edit">editar</button>
       <button type="submit" class="btn btn-default profile__buttons--save">salvar</button>
+      <a href="/profile/delete">Deletar</a>
     </div>
   </form>
 </div>

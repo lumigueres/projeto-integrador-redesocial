@@ -6,13 +6,13 @@ use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use App\Users;
 
 class ProfileController extends Controller
 {
     public function exibirProfile($identifier, Request $request){
         $logged_user = $request->user();
-        $user = DB::table('user_info')
-          ->where("email", urldecode($identifier))
+        $user = Users::where("email", urldecode($identifier))
           ->get();
 
         if ($user->isEmpty()) {
@@ -53,12 +53,17 @@ class ProfileController extends Controller
         }
 
 
-          DB::table('user_info')
-            ->where("email", urldecode($identifier))
+          Users::where("email", urldecode($identifier))
             ->update($user_info);
 
         }
 
         return redirect('/profile/'.$identifier);
     }
+
+    public function delete(){
+      $user = auth()->user();
+      Users::find($user->user_id)->delete();
+      return redirect('/home');
+   }
 }
