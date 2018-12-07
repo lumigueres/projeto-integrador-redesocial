@@ -6,13 +6,14 @@ use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use App\UserInfo;
 use App\Users;
 
 class ProfileController extends Controller
 {
     public function exibirProfile($identifier, Request $request){
         $logged_user = $request->user();
-        $user = Users::where("email", urldecode($identifier))
+        $user = UserInfo::where("email", urldecode($identifier))
           ->get();
 
         if ($user->isEmpty()) {
@@ -34,6 +35,7 @@ class ProfileController extends Controller
           $position = $request->position;
           $number = $request->number;
           $mini_bio = $request->mini_bio;
+          $status = $request->status;
 //corrigir os nomes das colunas no banco
 
 // Storage::put('../public/images/uploaded/file.jpg', $image);
@@ -53,7 +55,7 @@ class ProfileController extends Controller
         }
 
 
-          Users::where("email", urldecode($identifier))
+          UserInfo::where("email", urldecode($identifier))
             ->update($user_info);
 
         }
@@ -64,6 +66,8 @@ class ProfileController extends Controller
     public function delete(){
       $user = auth()->user();
       Users::find($user->user_id)->delete();
-      return redirect('/home');
+      UserInfo::where("email", $user->email)->update(['status' => 'inactive']);
+      Auth::logout();
+      return redirect('/');
    }
 }
