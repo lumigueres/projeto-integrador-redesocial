@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="/css/profile.css">
 
 <div class="profile container-fluid">
-  
+
   <div class="profile__row row">
     <form method="POST" action="" enctype="multipart/form-data">
       @csrf
@@ -30,7 +30,7 @@
         <input type="text" class="form-control profile-input__field" name="name" id="name" placeholder="nome" required @unless($isOwner) readonly @endunless value="{{ $user->name }}">
         <input type="text" class="form-control profile-input__field" name="last_name" id="last-name" placeholder="sobrenome" required @unless($isOwner) readonly @endunless value="{{ $user->last_name }}">
         <input type="text" class="form-control profile-input__field" name="area" id="area" placeholder="área de atuação" required @unless($isOwner) readonly @endunless value="{{ $user->area }}">
-        <input type="email" class="form-control profile-input__field" name="email" id="email-corp" placeholder="e-mail" required @unless($isOwner) readonly @endunless value="{{ $user->email }}">
+        <p class="form-control profile-input__field not-clickable">{{ $user->email }}</p>
         <input type="text" class="form-control profile-input__field" name="position" id="position" placeholder="cargo/papel" required @unless($isOwner) readonly @endunless value="{{ $user->position }}">
         <input type="text" pattern="[0-9]{10,11}" class="form-control profile-input__field" name="phone" id="telephone" required placeholder="telefone" @unless($isOwner) readonly @endunless value="{{ $user->phone }}">
         <input type="text" pattern="[0-9]{4}" class="form-control profile-input__field" name="number" id="number" placeholder="ramal" @unless($isOwner) readonly @endunless value="{{ $user->number }}">
